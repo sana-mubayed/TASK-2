@@ -1,0 +1,11 @@
+.title-card {
+    background-color: var(--color-white);
+    text-align: center;
+    border: 2px solid var(--color-grey-15);
+    border-radius: 8px;
+    background-color: var(--color-white);
+}
+
+.title-text {
+    color: var(--color-black);
+}

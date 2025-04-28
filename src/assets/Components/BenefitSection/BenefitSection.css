@@ -1,0 +1,6 @@
+.benefits-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}

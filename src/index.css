@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Raleway:wght@600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+  background-color: var(--color-orange-95);
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey-10: #1A1A1A;
+  --color-grey-15: #262626;
+  --color-grey-20: #333333;
+  --color-orange-65: #FF8D4D;
+  --color-orange-75: #FFAE80;
+  --color-orange-80: #FFBE99;
+  --color-orange-90: #FFDECC;
+  --color-orange-95: #FFEFE5;
+  --dark-gray: #1E1E1E;
+}
