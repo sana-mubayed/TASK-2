@@ -1,82 +1,25 @@
 .section-header {
     display: flex;
-    gap: 19px;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
     justify-content: center;
+    align-items: center;
+    gap: 19px;
     text-align: center;
+    margin-bottom: 100px;
 }
+
 .section-header h2 {
     font-weight: 700;
+    font-family: "Raleway";
     margin: 0;
     color: var(--color-grey-10);
-    font-size: 48px;
+    font-size: clamp(28px, 3vw, 58px);
 }
 
 .section-header p {
     font-weight: 500;
-    font-size: 18px;
+    font-family: "Outfit";
+    font-size: clamp(14px, 1.5vw, 20px);
     color: var(--color-grey-20);
-}
-
-@media (max-width: 1440px) {
-    .section-header h2 {
-        font-size: 38px;
-    }
-
-    .section-header p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-header h2 {
-        font-size: 28px;
-    }
-
-    .section-header p {
-        font-size: 14px;
-    }
-}
-
-.section-header {
-    display: flex;
-    gap: 19px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.section-header h2 {
-    font-weight: 700;
-    margin: 0;
-    font-size: 48px;
-}
-
-.section-header p {
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--color-grey-20);
-}
-
-@media (max-width: 1440px) {
-    .section-header h2 {
-        font-size: 38px;
-    }
-
-    .section-header p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-header h2 {
-        font-size: 28px;
-    }
-
-    .section-header p {
-        font-size: 14px;
-    }
+    max-width: 996px;
 }

@@ -1,59 +1,141 @@
 .notification-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border: 2px solid var(--color-grey-15);
     border-radius: 8px;
     background-color: var(--color-orange-90);
     position: relative;
+    height: 58px;
+    overflow: hidden;
 }
 
-.notification-center {
-    display: flex;
-    padding: 14px 0;
-    gap: 14px;
+.notification-container {
+    height: 100%;
 }
 
 .notification-text {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--color-grey-15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    h5 {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-grey-15);
+        display: flex;
+        gap: 14px;
+
+        img {
+            width: 18px;
+            height: 21px;
+        }
+    }
+
+    img {
+        width: 18px;
+        height: 21px;
+    }
+
 }
 
-.arrow-icon {
-    width: 18px;
-    height: 21px;
+.big-ball {
+    top: 0;
+    left: 30%;
 }
 
-.flipped {
-    transform: scaleX(-1);
+.small-ball {
+    bottom: 0;
+    right: 30%;
+}
+
+.small-ball,
+.big-ball {
+    opacity: 0.9;
+    position: absolute;
+    z-index: 2;
 
 }
 
-@media (max-width: 1440px) and (min-width: 400px) {
-    .notification-text {
+.right-design,
+.left-design {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    top: 0;
+}
+
+.right-design {
+    right: 0;
+}
+
+.left-design {
+    left: 0;
+}
+
+@media (max-width: 1440px) and (min-width: 1026px) {
+    .notification-bar {
+        height: 48px;
+    }
+
+    .notification-text h5 {
         font-size: 16px;
+
+        img {
+            height: 17px;
+            width: 14px;
+        }
     }
 
-    .arrow-icon {
-        Width: 14.4px;
-        Height: 16.8px;
+    .right-design,
+    .left-design {
+        width: 180px;
+        height: 68px;
+    }
+
+    .big-ball {
+        top: -25px;
+        width: 51px;
+        height: 51px;
+    }
+
+    .small-ball {
+        bottom: -15px;
+        width: 32px;
+        height: 32px;
     }
 }
 
-@media (max-width: 675px) {
-    .circle-image {
-        content: url("../../images/Abstract Design 3.png");
+@media (max-width: 1026px) {
+    .notification-bar {
+        height: 45px;
+    }
+
+    .notification-text h5 {
+        font-size: 14px;
+
+        img {
+            width: 12px;
+            height: 14px;
+        }
+    }
+
+    .big-ball {
+        left: 0%;
+        width: 32px;
+    }
+
+    .small-ball {
+        right: -4%;
+        top: 24px;
+    }
+
+    .left-design {
+        left: -10px;
+    }
+
+    .right-design,
+    .left-design {
         width: 50px;
         height: 50px;
     }
 
-    .notification-text {
-        font-size: 10px;
-    }
-
-    .arrow-icon {
-        Width: 12px;
-        Height: 14px;
-    }
 }

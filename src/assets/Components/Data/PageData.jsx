@@ -1,6 +1,6 @@
-import Icon1 from "../../images/Female-Icon.png";
-import Icon2 from "../../images/Male-Icon.png";
-import Icon3 from "../../images/Boy-Icon.png";
+import Icon1 from "/assets/images/Female-Icon.png";
+import Icon2 from "/assets/images/Male-Icon.png";
+import Icon3 from "/assets/images/Boy-Icon.png";
 
 
 export const HeadingTitle = 'Explore More'

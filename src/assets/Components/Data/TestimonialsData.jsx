@@ -1,6 +1,6 @@
-import Icon1 from "../../images/Female-Icon.png";
-import Icon2 from "../../images/Male-Icon.png";
-import Icon3 from "../../images/Boy-Icon.png";
+import Icon1 from "/assets/images/Female-Icon.png";
+import Icon2 from "/assets/images/Male-Icon.png";
+import Icon3 from "/assets/images/Boy-Icon.png";
 
 
 export const HeadingTitle = 'Their Happy Words 🤗'
@@ -15,12 +15,17 @@ export const TestimonialsData = [
     },
     {
         image: Icon2,
-        title: "David K",
+        Name: "David K",
         text: "Choosing Little Learners Academy for my daughter was the best decision. She has thrived in their nurturing and stimulating environment.",
     },
     {
         image: Icon3,
-        title: "Emily L",
+        Name: "Emily L",
         text: "My son's social and academic growth has been remarkable since joining Little Learners Academy. I am grateful for the supportive and dedicated teachers.",
+    },
+    {
+        image: Icon1,
+        Name: 'Sarah M',
+        text: "My child's confidence and love for learning have grown so much since enrolling at Little Learners Academy."
     },
 ]

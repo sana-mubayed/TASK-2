@@ -1,22 +1,37 @@
-import React from 'react'
-import './Navbar.css';
-import logo from '../../images/Logo Container.png';
+import { useState } from 'react'
+import './Navbar.css'
 
-export default function Navbar() {
+const Navbar = ({ logo, items, btn }) => {
+    const [navActive, setNavActive] = useState(items[0]?.content)
+    const [showMenu, setShowMenu] = useState(false)
     return (
         <>
             <nav className="navbar">
-                <div className="navbar__left">
-                    <img src={logo} alt="Logo" className="navbar__logo" />
+                <div className="logo-container">
+                    <img src={logo} alt="Logo" className="logo-image" />
                 </div>
-                <ul className="navbar__links">
-                    <li><a className='b-left b-right o-95' href="#home">Home</a></li>
-                    <li><a className='b-right' href="#about">About Us</a></li>
-                    <li><a className='b-right' href="#programs">Programs</a></li>
-                    <li><a className='b-right' href="#admission">Admission</a></li>
-                    <li><a cl href="#contact" className='o-75'>Contact</a></li>
+                <ul className="navLinks">
+                    {items?.map((item, index) => {
+                        const isContact = item?.content === "Contact";
+                        return (
+                            <li key={index}><a href={item?.link} onClick={() => setNavActive(item?.content)}   className={`${navActive === item?.content ? "active" : ""} ${isContact ? "contactLink" : ""}`}>{item?.content}</a></li>
+                        )
+                    })}
+                </ul>
+                {btn && <button>{btn}</button>}
+                <button className='showMenuButton' onClick={() => setShowMenu(!showMenu)}><img src="/assets/images/burger.svg" alt="" /></button>
+                <ul className={`navMenu ${showMenu && "show"}`}>
+                    {items?.map((item, index) => {
+                        const isContact = item?.content === "Contact";
+
+                        return (
+                            <li key={index}><a href={item?.link} onClick={() => setNavActive(item?.content)} className={`${navActive === item?.content ? "active" : ""} ${isContact ? "contactLink" : ""}`}>{item.content}</a></li>
+                        )
+                    })}
                 </ul>
             </nav>
         </>
     )
 }
+
+export default Navbar

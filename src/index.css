@@ -5,7 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", serif;
-  background-color: var(--color-orange-95);
+}
+
+body {
+  padding: 16px 50px;
+  background-color: var(--soft-Peach);
 }
 
 :root {
@@ -14,10 +18,22 @@
   --color-grey-10: #1A1A1A;
   --color-grey-15: #262626;
   --color-grey-20: #333333;
+  --color-grey-30: #4C4C4D;
+  --color-grey-40: #656567;
+
   --color-orange-65: #FF8D4D;
   --color-orange-75: #FFAE80;
   --color-orange-80: #FFBE99;
   --color-orange-90: #FFDECC;
   --color-orange-95: #FFEFE5;
+  --color-orange-97: #FFF5F0;
   --dark-gray: #1E1E1E;
+  --soft-Peach: #FFEFE5;
+}
+
+@media (max-width:1000px) {
+  body {
+    padding: 40px 16px;
+  }
+
 }
